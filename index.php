@@ -1,11 +1,7 @@
 <?php 
-
-
-
-
 $cam2="./192.168.1.80_001217d03ccd/";
 $dir="/01/pic/";
-$alldircam2=$cam2.date("Y-m-d").$dir;
+
 //Camera maison
 $pattern = "$alldircam2";
 $latest_filename ="";
@@ -17,6 +13,7 @@ if($dossier = opendir($cam2))
         if(!is_dir($fichier))
         {
              $latest_dir=$fichier;
+			 break;
         }
     }
 }
